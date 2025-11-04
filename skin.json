@@ -1,0 +1,73 @@
+{
+	"name": "Forest",
+	"namemsg": "skinname-forest",
+	"version": "1.0.0",
+	"author": [
+		"Your Name"
+	],
+	"url": "https://www.mediawiki.org/wiki/Skin:Forest",
+	"descriptionmsg": "forest-skin-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
+	"ValidSkinNames": {
+		"forest": {
+			"class": "MediaWiki\\Skin\\SkinMustache",
+			"args": [
+				{
+					"name": "forest",
+					"responsive": true,
+					"scripts": [
+						"skins.forest.js"
+					],
+					"styles": [
+						"skins.forest.styles"
+					],
+					"templateDirectory": "templates/"
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"Forest": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.forest.styles": {
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
+			"features": {
+				"normalize": true,
+				"elements": true,
+				"content": true,
+				"interface": true,
+				"legacy": false
+			},
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"styles": [
+				"resources/skin.less"
+			]
+		},
+		"skins.forest.js": {
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"scripts": [
+				"resources/skin.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Forest"
+	},
+	"AutoloadNamespaces": {
+	},
+	"manifest_version": 2
+}
